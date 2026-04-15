@@ -2,7 +2,7 @@
 
 **Platform:** Kiwi 1P5 (Gowin GW1N-UV1P5) | **Clock:** 27 MHz  
 **Contest:** FPGA Extended Contest 2026 — Preliminary Round RTL Design Test  
-**Author:** [Tên sinh viên]
+**Author:** Dong Truong Long
 
 ---
 
