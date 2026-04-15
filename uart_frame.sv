@@ -715,7 +715,9 @@ always @(posedge clk or negedge rst_n) begin
             resp_total<=3'd7; resp_idx<=3'd0; resp_busy<=1'b1;
         end
 
-        if (resp_busy && !tx_busy && !frame_req) begin
+        // ── Send response bytes ───────────────────────────────────
+        // FIX: Đợi tín hiệu !tx_busy_d và !tx_send để chống trôi byte
+        if (resp_busy && !tx_busy && !tx_busy_d && !tx_send && !frame_req) begin
             case (resp_idx)
                 3'd0: frame_byte<=resp[0];
                 3'd1: frame_byte<=resp[1];
